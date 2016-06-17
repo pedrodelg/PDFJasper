@@ -19,14 +19,14 @@ public class GenerarPdf {
         try
 	        {
         	
-       	 
+       	 		
 	            JasperReport jasperReport = null;
 	            JasperPrint jasperPrint = null;
 	            JasperDesign jasperDesign = null;
 	            Map parameters = new HashMap();
-	            jasperDesign = JRXmlLoader.load("D:/Practicas Java/GenerarPdf/WebContent/report1.jrxml"); //direccion del archivo jrxml
+	            jasperDesign = JRXmlLoader.load("D:/Practicas Java/GenerarPdf/WebContent/MovimientosPersonal.jrxml"); //direccion del archivo jrxml
 	            jasperReport = JasperCompileManager.compileReport(jasperDesign);  //complia el archivo
-	            jasperPrint  = JasperFillManager.fillReport(jasperReport, parameters, new JRBeanCollectionDataSource(com.pedroDelg.reporte.Student.getStudentList()));
+	            jasperPrint  = JasperFillManager.fillReport(jasperReport, parameters, new JRBeanCollectionDataSource(com.pedroDelg.reporte.Datos.getDatosList()));
 	            JasperExportManager.exportReportToPdfFile(jasperPrint,file); //crea el pdf y lo manda a la carpeta temporal  (el parametro file es el q contiene esa ruta)
 //	            JasperViewer.viewReport(jasperPrint); esto no se usa, solo para hacer pruebas de visualizacion de reporte con el jasperviewer 
 	            
