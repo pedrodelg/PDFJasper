@@ -9,7 +9,7 @@
 <body>
 <h1>Generar Reporte</h1>
 <br>
-	<form action="http://localhost:8080/GenerarPdf/ReporteServlet"> <!-- cambiar la direccion del servidor  --> 
+	<form action="/GenerarPdf/ReporteServlet"> <!-- cambiar la direccion del servidor  --> 
 		<input type="submit" value="Generate PDF report">
 	</form>
 

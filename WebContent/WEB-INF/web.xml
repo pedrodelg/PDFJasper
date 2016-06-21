@@ -13,5 +13,15 @@
 		<welcome-file>default.jsp</welcome-file>
 	</welcome-file-list>
 
+	<servlet>
+		<description></description>
+		<display-name>ReporteServlet</display-name>
+		<servlet-name>ReporteServlet</servlet-name>
+		<servlet-class>com.pedroDelg.reporte</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ReporteServlet</servlet-name>
+		<url-pattern>/GenerarPdf/ReporteServlet</url-pattern>
+	</servlet-mapping>
 
 </web-app>

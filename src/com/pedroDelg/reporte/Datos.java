@@ -88,9 +88,9 @@ public class Datos {
 			datos2.setUbicacionAdmin("Coordinacio funcional");
 			datos2.setCedula(245682);
 			datos2.setCodigo(16578);
-			datos2.setRutaImagen("D:/Practicas Java/GenerarPdf/WebContent/Imagenes/BCV.jpg");
-			datos2.setFirma("D:/Practicas Java/GenerarPdf/WebContent/Imagenes/firma.jpg");
-			datos2.setSello("D:/Practicas Java/GenerarPdf/WebContent/Imagenes/sello.jpg");
+			datos2.setRutaImagen("/WebContent/Imagenes/BCV.jpg");
+			datos2.setFirma("/WebContent/Imagenes/firma.jpg");
+			datos2.setSello("/WebContent/Imagenes/sello.jpg");
 			datos.add(datos2);
 			
 		} catch (Exception ex) {
