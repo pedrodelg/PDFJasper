@@ -51,8 +51,12 @@ public class ReporteServlet extends HttpServlet {
 		response.setHeader("Content-disposition", "attachment; " + "filename=" + fileName);
 
 		try {
-
-			GenerarPdf.createPDF(temperotyFilePath+"\\"+fileName);  //INVOCA LA clase que crea el PDF y le manda la direccion de la carpeta temporal para que lo cree ahi
+			String logoBCV  = getServletContext().getRealPath("/Imagenes/BCV.jpg");
+			String firma    = getServletContext().getRealPath("/Imagenes/firma.jpg");
+			String sello    = getServletContext().getRealPath("/Imagenes/sello.jpg");
+			String cartaEvaluacion    = getServletContext().getRealPath("CartaEvaluacion.jrxml");
+			
+			GenerarPdf.createPDF(temperotyFilePath+"\\"+fileName, logoBCV, firma, sello, cartaEvaluacion);  //INVOCA LA clase que crea el PDF y le manda la direccion de la carpeta temporal para que lo cree ahi
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
 			baos = convertPDFToByteArrayOutputStream(temperotyFilePath + "\\" + fileName);
 			OutputStream os = response.getOutputStream();

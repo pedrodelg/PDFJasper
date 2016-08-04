@@ -8,9 +8,7 @@ public class Datos {
 	private String ubicacionAdmin;
 	private int cedula;
 	private int codigo;
-	private String rutaImagen;
-	private String firma;
-	private String sello;
+
 
 	public Datos() {
 		super();
@@ -55,31 +53,6 @@ public class Datos {
 		this.codigo = codigo;
 	}
 	
-	public String getRutaImagen() {
-		return rutaImagen;
-	}
-
-	public void setRutaImagen(String rutaImagen) {
-		this.rutaImagen = rutaImagen;
-	}
-	
-	
-	public String getFirma() {
-		return firma;
-	}
-
-	public void setFirma(String firma) {
-		this.firma = firma;
-	}
-
-	public String getSello() {
-		return sello;
-	}
-
-	public void setSello(String sello) {
-		this.sello = sello;
-	}
-
 	public static Collection<Datos> getDatosList() {
 		Vector<Datos> datos = new Vector<Datos>();
 		try {
@@ -88,9 +61,6 @@ public class Datos {
 			datos2.setUbicacionAdmin("Coordinacio funcional");
 			datos2.setCedula(245682);
 			datos2.setCodigo(16578);
-			datos2.setRutaImagen("/WebContent/Imagenes/BCV.jpg");
-			datos2.setFirma("/WebContent/Imagenes/firma.jpg");
-			datos2.setSello("/WebContent/Imagenes/sello.jpg");
 			datos.add(datos2);
 			
 		} catch (Exception ex) {
